@@ -1,0 +1,9 @@
+/* ======================= RESET BÁSICO ======================= */
+/* Remove margens e paddings padrão e ajusta o box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Continuar digitação código CSS (deste ponto) */
