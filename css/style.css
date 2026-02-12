@@ -4,6 +4,157 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
-/* Continuar digitação código CSS (deste ponto) */
+/*Variáveis do TEMA (cores) */
+
+:root {
+  --cor-primaria: #f9003d;
+  --cor-secundaria: #a259f7;
+  --cor-destaque: #ffaf00;
+  --fundo-escuro: #080324;
+  --texto-claro: #fff;
+  --texto-cinza: #c7bab3;
+}
+
+/* Estilos gerais para toda a página */
+
+body {
+  /* Cor de fundo da página total */
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+  font-family: 'Bebas Neue', sans-serif;
+  Line-height: 1.6;   /* distanciamento entre os blocos de texto*/
+  font-size: 18px;  /* Tamanho da fonte */
+}
+/* Remove o itálico padrão da tag address */
+address {
+  font-style: normal;
+}
+
+/* caixa que envolve o header*/
+.container { 
+ 
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Header (cabeçalho) */
+.header {
+  background-color: var(--cor-primaria);
+  position: fixed; /* Mantem header no topo fixo */
+  width: 100%;
+  z-index: 10; /* conteúdo fica sempre evidente */
+  padding: 0.5rem 0;
+}
+
+/* Organização dos itens do header em lista */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  /* flex-direction: row-reverse; */ 
+  /* Inverte a ordem do header */
+}
+
+.logo {
+  height: 40px; /* controla o tamanho da imagem */
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 1.5rem; /* Espaça os links do menu */
+  list-style: none; /* Retira a bolinha da lista */
+}
+
+/* Organização dos itens do header e hover (transição de cores) */
+.menu a {
+  color: var(--texto-claro);
+  text-decoration: none; /* Retira o undeline do link */
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3 ease; 
+}
+
+.menu a:hover {
+  color: var(--cor-destaque); /* Quando o mouse estiver em cima ele muda de cor */ 
+}
+
+.btn-menu {
+  display: none; /* Esconde o menu hamburguer (telas grandes)*/
+}
+
+
+
+
+
+/* Botão Contate-nos */
+.botao {
+  background-color: var(--cor-secundaria);
+  color: var(--texto-claro) !important;/* Força o texto a ser branco */
+  padding: 0.6rem 1.5rem; /* "em cima em baixo, esquerda direita" (ordem)*/
+  border-radius: 5px; /* Arredondar os cantos do botão */
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mudança de cor (hover) do botão contate-nos */
+.botao:hover {
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-destaque));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra ao redor do elemento */
+  transform: translateY(-2px) scale(1.05); /* Efeito de elevação */ 
+}
+
+
+/*_____________________________________________*/
+/* Responsividade (Tamanho de telas diferentes) */
+
+/* Regra para quando a tela for menor qe 768px */
+@media (max-width: 768px){
+  /* Header */
+  .nav-header{
+    justify-content: center; /* centralizar */
+  }
+  .menu {
+    padding-top: 0; /* diminuir o header */
+  }
+
+
+  /*________________________________________________*/
+  /* Programação (Exclusiva para menu hamburguer)  */
+  .btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    font-size: 2.5rem;
+    cursor: pointer;
+ }
+
+  .nav-header {
+    justify-content: space-between;
+}
+  .menu {
+    display:none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+  .menu.aberto {
+    display: flex; 
+  }
+  
+}
+  
+
+
