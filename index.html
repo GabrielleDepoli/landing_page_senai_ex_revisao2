@@ -33,8 +33,8 @@
             <!-- Menu (com links e classes) -->
             <ul class="menu">
                 <li><a href="#">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#sobre">Sobre</a></li> <!-- precisa colocar id, pq esse endereco busca o outro abaixo (vínculo) -->
+                <li><a href="#endereco">Endereço</a></li> <!-- precisa colocar id, pq esse endereco busca o outro abaixo -->
                 <li><a href="#" class="botao">Contate-nos</a></li>
             </ul>
         </nav>
@@ -53,7 +53,7 @@
          </section>
 
 <section class="sobre" id="sobre">
-    <div class="container">
+    <div class="container"> <!-- já deixa "tudo no lugar antes da estilização "-->
         <h2 class="titulo-secao">Sobre os projetos</h2>
 
 
@@ -69,8 +69,60 @@
     </div>
 </section>
 
-     </main>
+<!-- Seção (cards) -->
+ <section class="info">
+    <div class="container">
+        <ul class="cards-info">  <!-- Lista de classes -->
+            <li class="card"> <!-- lista de cards inseridos na seção -->
+                <h3>Local</h3> <!--cards-->
+                <p>São Paulo</p>
+            </li>
 
+            <li class="card"> <!-- lista de cards 2 inseridos na seção -->
+                <h3>Duração</h3> <!--cards 2-->
+                <p>90 dias</p>
+            </li>
+
+            <li class="card"> <!-- lista de cards 3 inseridos na seção -->
+                <h3>Desafios</h3> <!--cards 3-->
+                <p>+30 desafios</p>
+            </li>
+
+        </ul>
+    </div>
+
+ </section>
+
+ <!-- Seção (Endereço) -->
+  <section class="endereco" id="endereco">
+    <div class="container"> <!--limitar o comprimento -->
+        <h2 class="titulo-secao">Endereço</h2>
+
+        <div class="conteudo-endereco">
+            <address class="texto-endereco"> <!--tag de endereço-->
+                 Av. Santos Dumont, 300<br>
+                Ipiranguinha, Santo André - SP
+                CEP: 09015-320
+            </address>
+
+            <a href="https://maps.app.goo.gl/oEnMLQu8WrTodYUv6" target="_blank"> <!--endereço do mapa/ tag a é link para outra página/ target abre uma nova aba e não fecha a aba principal da sua página -->
+                <img src="assets/mapa.png" alt="Mapa do Senai" class="mapa"> <!--imagem do mapa-->
+            </a>
+
+        </div>
+    </div>  
+    </section>
+         </main>
+
+         <!-- Footer (Rodapé) -->
+          <footer class="footer">
+            <p>Copyright © 2026 - SENAI/SESI Santo André 1.18</p>
+          </footer>
+
+
+
+
+          
     <!-- Chamada do Java Script para programar o hamburguer-->
     <script src="efeito.js"></script>
     

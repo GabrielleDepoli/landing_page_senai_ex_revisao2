@@ -77,7 +77,7 @@ address {
 /* Organização dos itens do header e hover (transição de cores) */
 .menu a {
   color: var(--texto-claro);
-  text-decoration: none; /* Retira o undeline do link */
+  text-decoration: none; /* Retira o undeline (SUBLINHADO) do link */
   font-weight: 600;
   font-size: 1.2rem;
   transition: color 0.3 ease; 
@@ -116,14 +116,14 @@ address {
 
 /* Banner principal (Main) */
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../assets//imagem-fundo-banner.jpg");
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../assets//imagem-fundo-banner.jpg"); /* sombra na imagem de fundo, deixa aimagem mais escura */
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 100vh; /* ocupa a altura da tela inteira */
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 60px; /* Espaço para o header fixo */
 }
 
 .conteudo-banner h1 {
@@ -131,7 +131,7 @@ address {
   margin-bottom: 1rem;
 }
 
-.linha-destaque {
+.linha-destaque { /* linha amarela */
   width: 400px;
   height: 2px;
   background-color: var(--cor-destaque);
@@ -199,8 +199,78 @@ address {
   font-size: 1.2rem;
 }
 
+/* Cards (Estilização) */
+.info {
+  padding: 4rem;
+  text-align: center; /* deixa os textos centralizados */
+}
 
+.cards-info { /* adicionando informações dos cards */
+  list-style: none; /* tira a bolinha da frente da palavra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite o texto quebrar p/ linha abaixo (responsividade automática) */
+}
 
+.card { /* ajustando tamanho dos cards e caixas */
+  background-color: #241a1c;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* largura do card */
+}
+
+.card h3 { /* titúlo do card */ 
+  color: var(--cor-destaque);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card p { /* informações do card */
+  background-color: var(--fundo-escuro);
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Seção (Endereço) */
+.endereco {
+  padding: 4rem 0;
+}
+
+.conteudo-endereco {
+  display: flex; /* organizar texto e imagem lado a lado*/
+  justify-content: space-between;
+  align-items: center; /* alinhamento vertical */
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.texto-endereco {
+  font-size: 1.3rem;
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+  flex-grow: 1; /* Permite que o texto cresça se houver espaço */
+}
+
+.mapa {
+  width: 350px;
+  border-radius: 10px;
+ /* box-shadow: 0 4px 15px rgba(0,0,0,0.3);*/
+  box-shadow: 20px 20px 10px rgba(255,0,0,1); /* Efeito de sombra */
+}
+
+/* Footer (Rodapé) */
+.footer {
+  background-color: var(--cor-primaria);
+  text-align: center; /* texto centralizado */
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+}
 
 
 /*_____________________________________________*/
@@ -250,6 +320,16 @@ address {
     display: flex; 
   }
   
+  /* Reduz o tamanho das fontes para melhor legibilidade */
+  .conteudo-banner h1 {font-size: 3.5rem;}
+  .subtitulo {font-size: 1.5rem;}
+  .titulo-secao {font-size: 2.5rem;}
+  .texto-sobre h3 {font-size: 2rem;}
+  .texto-sobre p {font-size: 1.1rem;}
+  .card h3 {font-size: 1.5rem;}
+  .card p {font-size: 1.3rem;}
+  .texto-endereco {font-size: 1.1rem;}
+
 }
   
 
